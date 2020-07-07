@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta Charset="UTF-8">
+<title>NumberGuess Game</title>
+<script>
+	var message="";
+	var answer=6;
+	var counter=1;
+	do{
+	var input=prompt("Guess the Number from 1 to 10");
+	input=parseInt(input);
+	if(input!=answer)
+		alert("Nope!-You guessed it wrong");
+	else {
+	flag=true;
+	break;
+	}
+	if(counter==3)
+	{
+	break;
+	}
+	counter++;
+	}while(answer!=input);
+	
+     if(flag)
+	{
+	message+="Hurray!-You guessed it right "+ answer +" is the answer.";
+	}
+	else{
+	message+="Better luck next time";
+	}
+</script>
+</head>
+<body>
+	<h1>Guess the Number</h1>
+	<script>
+	document.write(message);
+	</script>
+</body>
+</html>
